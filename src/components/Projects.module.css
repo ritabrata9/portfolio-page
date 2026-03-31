@@ -1,0 +1,118 @@
+.section {
+  padding: 100px 48px;
+  border-top: 1px solid var(--border);
+}
+
+.container { max-width: 900px; }
+
+.header { margin-bottom: 48px; }
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.card {
+  display: flex;
+  gap: 32px;
+  padding: 32px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: border-color 0.15s, background 0.15s;
+}
+.card:hover {
+  border-color: var(--border-light);
+  background: var(--bg-3);
+}
+
+.cardLeft {
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.index {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.cardBody { flex: 1; }
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.projectTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.extLink {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  line-height: 1;
+  transition: color 0.15s, border-color 0.15s;
+}
+.extLink:hover {
+  color: var(--accent);
+  border-color: rgba(232, 255, 71, 0.35);
+}
+
+.description {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 3px 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .section { padding: 80px 24px; }
+  .card { flex-direction: column; gap: 12px; padding: 24px; }
+  .cardLeft { display: none; }
+}

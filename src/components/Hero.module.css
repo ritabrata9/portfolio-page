@@ -1,0 +1,139 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 48px 80px;
+  max-width: 900px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  margin-bottom: 28px;
+  padding: 6px 14px;
+  border: 1px solid rgba(232, 255, 71, 0.25);
+  border-radius: 2px;
+  width: fit-content;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+
+.accent { color: var(--accent); }
+
+.role {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--text-dim);
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+
+.summary {
+  font-size: 1.05rem;
+  color: var(--text-dim);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 24px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-bottom: 40px;
+  width: fit-content;
+  flex-wrap: wrap;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metaLabel {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.metaValue {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.divider {
+  width: 1px;
+  height: 32px;
+  background: var(--border);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000;
+  background: var(--accent);
+  padding: 12px 28px;
+  border-radius: 2px;
+  transition: opacity 0.15s;
+}
+.btnPrimary:hover { opacity: 0.85; }
+
+.btnGhost {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 12px 28px;
+  border: 1px solid var(--border-light);
+  border-radius: 2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.btnGhost:hover {
+  color: var(--text);
+  border-color: var(--text-dim);
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 100px 24px 60px; }
+  .meta { gap: 16px; padding: 16px; }
+  .divider { display: none; }
+}

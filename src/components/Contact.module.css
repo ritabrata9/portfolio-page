@@ -1,0 +1,128 @@
+.section {
+  padding: 100px 48px;
+  border-top: 1px solid var(--border);
+}
+
+.container { max-width: 900px; }
+
+.header { margin-bottom: 52px; }
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.contactCard {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  position: relative;
+  transition: border-color 0.15s, background 0.15s;
+  overflow: hidden;
+}
+.contactCard:hover {
+  border-color: rgba(232, 255, 71, 0.3);
+  background: var(--accent-dim2);
+}
+.contactCard:hover .arrow { color: var(--accent); }
+
+.contactType {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.contactValue {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.contactIcon {
+  width: 22px;
+  height: 22px;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 2px;
+  transition: color 0.15s;
+}
+
+.contactCard:hover .contactIcon {
+  color: var(--accent);
+}
+
+.arrow {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+  transition: color 0.15s;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+  background: var(--accent-dim2);
+  border: 1px solid rgba(232, 255, 71, 0.15);
+  border-radius: 4px;
+}
+
+.ctaText {
+  font-size: 1rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+.ctaBtn {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000;
+  background: var(--accent);
+  padding: 12px 28px;
+  border-radius: 2px;
+  white-space: nowrap;
+  transition: opacity 0.15s;
+}
+.ctaBtn:hover { opacity: 0.85; }
+
+@media (max-width: 768px) {
+  .section { padding: 80px 24px; }
+  .grid { grid-template-columns: 1fr; }
+  .cta { flex-direction: column; align-items: flex-start; gap: 16px; }
+}

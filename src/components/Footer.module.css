@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 48px;
+  border-top: 1px solid var(--border);
+}
+
+.copy, .built {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .footer { padding: 24px; flex-direction: column; gap: 8px; }
+}
