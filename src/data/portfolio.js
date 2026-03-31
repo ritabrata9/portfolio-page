@@ -1,6 +1,6 @@
 export const meta = {
   name: 'Ritabrata Basak',
-  role: 'CS Undergrad & Full-Stack Developer',
+  role: 'CS Undergrad & Application Developer',
   institution: 'IIEST Shibpur',
   degree: 'B.Tech Computer Science & Technology',
   year: '2024 – 2028',
